@@ -1,3 +1,424 @@
----
-layout: default
----
+<!-- 
+    Designed and Developed by Rohit Jadhav @ Radical Sphere 
+    Radical Sphere © 2022  
+
+    Last updated: 19th April 2022
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta 
+        name="author" 
+        content="Rohit Jadhav">
+    <meta 
+        name="description" 
+        content="Radical Sphere's web projects and design systems portfolios." >
+    <meta 
+        name="keywords"     
+        content="Meta Tags, Metadata" />
+
+
+
+    <title>Radical Sphere</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dit7htm.css">
+    <style>
+        html, body{
+            margin: 0;
+            padding: 0;
+            position: relative;
+            background-color: white;
+        }
+
+
+
+        h1{
+            font-family: adobe-garamond-pro, serif;
+            font-size: 1.4em;
+            font-weight: 400;
+            font-style: normal;
+            line-height: 1.3em;
+            
+            margin: 0;
+        }
+        h2{
+            font-family: source-code-pro,monospace;
+            font-weight: 300;
+            font-style: small;
+            letter-spacing: 0.5em;
+            text-transform: uppercase;
+            text-align: center;
+
+            margin-top: 5em;
+
+        }
+
+        h3{
+            font-family: adobe-garamond-pro, serif;
+            font-size: clamp(2.7em, 5vw, 3.5em);
+            font-weight: 400;
+            
+            margin: 0;
+        }
+
+        h4, h5, h6{
+        font-family: source-code-pro,monospace;
+        font-weight: 400;
+        font-style: normal;
+
+        }
+        h4{
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.7em;
+            line-height: 1.3em;
+            
+            padding-bottom: 0.5em;
+            margin: 0;
+
+        }
+
+        ul{
+            list-style: none;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <style>
+        .cursor {
+            position: absolute;
+            width: 1em;
+            height: 1em;
+            z-index: 1000;
+            
+            pointer-events: none;
+
+        }
+    </style>
+
+    <div class="cursor" id="cursor">
+
+        <svg width="100%" height="100%" viewBox="0 0 187 172" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+            style="
+            fill-rule:evenodd;
+            clip-rule:evenodd;
+            stroke-linejoin:round;stroke-miterlimit:2; ">
+            <path
+                d="M117.517,-0c51.54,-0 68.84,32.357 69.251,83.895c0.285,35.816 -29.611,87.835 -81.151,87.835c-51.539,-0 -105.617,-36.295 -105.617,-87.835c0,-51.54 65.977,-83.895 117.517,-83.895Z" />
+        </svg>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let mousePosX = 0,
+                mousePosY = 0,
+                mouseCircle = document.getElementById('cursor');
+
+            document.onmousemove = (e) => {
+                mousePosX = e.pageX;
+                mousePosY = e.pageY;
+            }
+
+            let delay = 6,
+                revisedMousePosX = 0,
+                revisedMousePosY = 0;
+
+            function delayMouseFollow() {
+                requestAnimationFrame(delayMouseFollow);
+
+                revisedMousePosX += (mousePosX - revisedMousePosX) / delay;
+                revisedMousePosY += (mousePosY - revisedMousePosY) / delay;
+
+                mouseCircle.style.top = revisedMousePosY + 'px';
+                mouseCircle.style.left = revisedMousePosX + 'px';
+            }
+            delayMouseFollow();
+        });
+    </script>
+
+
+    <style>
+        .title {
+            text-align: center;
+            margin: 0 auto;
+            padding: 8em 5em;
+        }
+    </style>
+
+    <section class="title">
+        <img style="max-width: 270px; margin-bottom: 3em;" src="./img/radical-sphere-logo.svg" alt="" srcset="">
+        <h1>Radical Sphere <i><a href="http://" target="_blank" class="menu-anchor"> designs products</a></i> &
+            <i>
+                <a href="http://" target="_blank" class="menu-anchor"> user experiences</a>
+            </i> with science and curiosity."</h1>
+
+    </section>
+
+
+
+    <section>
+        <h2 contenteditable="true">Projects and innovations</h2>
+
+        <style>
+            .project-list {
+                margin: 0;
+                padding: 0;
+            }
+
+            .project-list li {
+                padding: 2em;
+                margin: 1px 0;
+                display: grid;
+                grid-template-columns: 0.2fr 1fr;
+
+                background-color: var(--grey);
+            }
+
+            .project-list li:hover {
+                filter: invert();
+            }
+
+            .project-list li div {
+                align-self: center;
+                width: 15ch;
+            }
+
+            .project-list a{
+                text-decoration: none;
+            }
+
+        </style>
+        <ul class="project-list">
+
+
+
+            <!-- <li>
+                <div>
+                    
+                    <h4>Web App</h4>
+                </div>
+                <a href="./projects/car-loan-calculator/">
+                <h3>Car Loan Calculate</h3>
+                </a>
+            </li> -->
+
+
+
+            <li>
+                <div>
+                    <h4>UX Case-Study</h4>
+                </div>
+                <a href="https://spiffy-lamprey-f50.notion.site/MathBoard-198066e48cff41329d779df635c08fcc">
+                <h3><b>MathBoard</b> Keyboard for Mathematicians</h3>
+</a>
+            </li>
+            <li>
+                
+                
+                <div>
+                    <h4>product designing</h4>
+                    <h4>branding</h4>
+                    <h4>e-commerce</h4>
+                </div>
+                <a href="./projects/rolling-rockets/">
+                    <h3>How <i>packaging-design</i> in time saved nine for Rolling Rockets</h3>
+                </a>
+                </li>
+            <li>
+                <div>
+                    <h4>UIUX</h4>
+                    <h4>web dev </h4>
+                </div>
+                <a href="http://kansodesignworks.co/">
+                    <h3>Kanso Design Works, UIUX design agency</h3>
+                </a>
+            </li>
+            <li>
+                <div>
+                    <h4>Branding</h4>
+                    <h4>web design</h4>
+                </div>
+                <a href="https://www.behance.net/gallery/143574085/Ticket-Utils-Branding-and-Website">
+                    <h3>Ticket-Utils-Branding-and-Website</h3>
+                </a>
+            </li>
+
+            <li>
+                <div>
+                    <h4>Branding</h4>
+                    <h4>brand identity design</h4>
+                    <h4>UIUX</h4>
+                </div>
+                <a href="https://www.behance.net/gallery/96959795/Environ-Global-Branding">
+                <h3>Environ Global</h3></a>
+            </li>
+            <li>
+                <div>
+                    <h4>Branding</h4>
+                    <h4>brand identity design</h4>
+                    <h4>UIUX</h4>
+                    <h4>web dev</h4>
+                </div>
+                <a href="https://environ-propack.web.app/">
+                <h3>Environ Pro-packs</h3></a>
+            </li>
+
+            <li>
+                <div>
+                    
+                    <h4>Web Design</h4>
+                </div>
+                <a href="./projects/cadence/">
+                <h3><b>Cadence</b> About us redefined</h3>
+                </a>
+            </li>
+            <li>
+                <div>
+                    <h4>Web App</h4>
+                    <h4>work in progress</h4>
+                    
+                </div>
+                <a href="https://www.instagram.com/p/CQwGkKHMmHN/">
+                    <h3>Cloud Printing Factory</h3>
+                </a>
+                
+            </li>
+
+
+            <li>
+                <div>
+                    <h4>landing page</h4>
+                    
+                </div>
+                <a href="https://radicalrohit.github.io/gravonex/">
+                    <h3>Gravonex - software company</h3>
+                </a>
+                
+            </li>
+            <li>
+                <div>
+
+                    <h4>branding</h4>
+                    <h4>brand identity design</h4>
+                    <h4>landing page</h4>
+                    
+                </div>
+                <a href="https://in.pinterest.com/pin/727120302342377494/">
+                    <h3>Shoonya - Branding Agency</h3>
+                </a>
+                
+            </li>
+            <li>
+                <div>
+                    <h4>Branding</h4>
+                    <h4>landing page</h4>
+                    
+                </div>
+                <a href="https://radicalrohit.github.io/sangram-website/">
+                    <h3>Sangram Auto Components</h3>
+                </a>
+                
+            </li>
+            <li>
+                <div>
+                    <h4>website</h4>
+                    
+                </div>
+                <a href="https://radicalrohit.github.io/deogiri/">
+                    <h3>Deogiri College Aurangabad </h3>
+                </a>
+                
+            </li>
+            <li>
+                <div>
+                    <h4>UX Case-Study</h4>
+                    <h4>Product Design</h4>
+                </div>
+                <a href="https://spiffy-lamprey-f50.notion.site/3298e42c59f84f1e968b0ca7fba3efaa?v=18ea82eb062542f2a2135dda34fde941">
+                <h3>Internatioanl Gifting - for Idea Loft Studio</h3>
+                </a>
+            </li>
+            <li>
+                <div>
+                    <h4>User experience case-study</h4>
+                </div>
+                <a href="https://spiffy-lamprey-f50.notion.site/19b255a4e36c4aafa8d2e3e4d91dd4cf?v=0b36e5c9da87406a8d0a8c6ea27c32f5">
+                    <h3>Internet Service Provider - client-side app </h3>
+                </a>
+            </li>
+
+
+            <!-- <li>
+                <div>
+                    <h4>Product Design</h4>
+                </div>
+                <h3>Water ATMs for public places.</h3>
+            </li>
+            <li>
+                <div>
+                    <h4>Product Design</h4>
+                </div>
+                <h3>Retro induction.</h3>
+            </li> -->
+
+
+        </ul>
+
+    </section>
+
+<style>
+footer{
+    max-width: 600px;
+    margin: 0 auto;
+    padding-block: 5em;
+    
+}
+footer p{
+    font-family: source-code-pro,monospace;
+    font-weight: 400;
+    font-size: medium;
+
+
+}
+</style>
+
+    <footer>
+
+        <p>✉️E-mail directly project ideas at 
+            <a href="mailto:rohit@radicalsphere.com">
+            rohit@radicalsphere.com</a>  </p>
+
+
+        <p>OR <br> tweet us <a href="https://twitter.com/RadicalSphere">Twitter</a> 
+        <br>  
+        ♥️ us on<a href="https://www.instagram.com/radicalsphere/">  Instagram</a> 
+        <br>
+        <a href="https://in.pinterest.com/radicalsphere">Pinterest</a>.
+        <br> 
+        <a href="https://www.behance.net/radicalsphere">Bēhance</a>
+        <a href="https://dribbble.com/RadicalSphere">Dribbble</a>
+        </p>
+        
+
+
+    </footer>
+
+
+
+
+</body>
+
+</html>
+

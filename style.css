@@ -1,0 +1,22 @@
+:root{
+font-size: 16px;
+--grey: #D4D4D4;
+}
+p{
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2em;
+}
+
+
+h1{
+    font-family: adobe-garamond-pro, serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a{
+    text-decoration: underline;
+    color: inherit;
+}

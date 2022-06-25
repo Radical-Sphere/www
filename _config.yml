@@ -1,5 +1,0 @@
-markdown: redcarpet
-baseurl: /www
-exclude: ['README.md']
-sass:
-    sass_dir: _sass

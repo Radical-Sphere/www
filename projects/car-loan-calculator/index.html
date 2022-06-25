@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Loan Calculate</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dit7htm.css">
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v6.js"></script>   
+
+    <style>
+
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 600px;
+            line-height: 1.8;
+            margin: 0 auto;
+            padding: 2em;
+        }
+        img{
+            width: 100%;
+        }
+        h3{
+            font-size: 2em;
+            margin-top: 100px;
+            color: darkblue;
+        }
+
+        input{
+            width: 100px;
+        }
+        input[type="number"]{
+            direction: rtl
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <a href="../../index.html">back to Radical Sphere</a>
+    <h3>Car Loan Calculate </h3>
+    <div id="my_dataviz"></div>
+
+    <div>
+        <label for="borrowAmt">Borrow amount in </label>
+        <input 
+        name="borrowAmt" 
+        id="borrowAmtInput" 
+        value="1,00,000" 
+        min="1,00,000" 
+        max="1,00,00,000"
+        
+        > 
+        ₹ 
+    
+
+        
+
+        <form>
+            <label for="loanTermRange">Loan term</label>
+            <input id="loanTermRange" max="7" oninput="this.form.loanTermInput.value=this.value" min="1" step="1" type="range" value="1">
+
+            <input id="loanTermInput" type="number" oninput="this.form.loanTermRange.value=this.value"  min="1" max="7" value="1" 
+            > years
+           </form> 
+    
+
+           <form>
+            <label for="InterestRateRange">Interest Rate</label>
+            <input id="InterestRateRange" 
+            max="15" 
+            oninput="this.form.InterestRateInput.value=this.value" 
+            min="1" 
+            step="0.1" 
+            type="range" 
+            value="1">
+
+            <input id="InterestRateInput" 
+            type="number" 
+            oninput="this.form.InterestRateRange.value=this.value"  
+            min="1" 
+            max="15" 
+            value="1" > %
+           </form> 
+
+           <script>
+               import * as d3 from "d3";
+
+               d3("#borrowAmtInput").value
+           </script>
+
+    
+
+
+    </div>
+
+
+
+    <h3>FAQ</h3>
+        <ol>
+            <li>
+                <b>How to use Car Loan EMI calculator</b>
+                <ol>
+                    <li>Enter your principal amount, interest rate and tenure.</li>
+                    <li>Click and know your EMI payable.</li>
+                </ol>
+        
+                    
+            </li>
+            <li>
+                <b>How much time does it takes to use the calculator?</b><br>
+                If you have the details with you (total amount, interest levied and tenure), it takes only few seconds.
+                    
+            </li>
+            <li><b> What is the typical tenure of a car loan in India.</b><br>
+                In India most car loans run for 1 to 5 years, although certain new plans to run for up to 7 years. The lower the tenure, the higher the EMIs you need to pay.
+            </li>
+            <li><b> Can my car loan application be rejected?</b><br>
+                On occasion, your car loan application may be rejected if you do not fulfill the minimum eligibity criteria or if there is a mistake in your documentation. Besides, your CIBIL score has to be 750 or more at all times.
+            </li>
+            <li><b> How is car loan EMI calculated monthly?</b><br>
+                EMI or Equated Monthly Installments refer to the monthly payments you make to the lender to repay your loan. These payments include the pricipal amount as well as the interest i.e. <br>
+                <code>
+                    EMI = Prncipal Amount + Interest on Pricipal amount
+                </code>
+                <br><br>
+                <i>Mathematics</i> , EMI can be calculate using the following formula: <br>
+                <code>
+                    {
+                        P x R x (1+R)^ N / [(1+R)^ N-1]
+                    }
+                </code>
+                <br>
+                where,<br> 
+                P = Principal amount of the loan, <br>
+                R = Rate of intreest and<br>
+                N = Number of monthly installments.
+
+
+            </li>
+
+        </ol>
+
+
+    
+    <h3>Stack Bar Graph <small>for RateCity Car loans page </small> </h3>
+    <img src="./img/ratecity emi graph.jpg" alt="" srcset="">
+    <h3>Low fidelity wireframes  </h3>
+    <img src="./img/IMG_2624.jpg" alt="" srcset="">
+
+
+    <h3>Research based on top 10 car loan EMI websites over Google.</h3>
+        <ol>
+            <li>https://www.icicibank.com/calculator/car-loan-emi-calculator.page</li>
+            <li>https://www.ratecity.com.au/car-loans</li>
+            <li>https://www.calculator.net/auto-loan-calculator.html</li>
+            <li>https://emicalculator.net/</li>
+            <li>bankofbaroda.in/calculators/car-loan-emi-calculator</li>
+            <li>https://www.primeloans.kotak.com/viewCarLoanEmiCalc.htm</li>
+            <li>https://www.axisbank.com/retail/calculators/car-loan-emi-calculator</li>
+            <li>https://www.hdfcbank.com/personal/tools-and-calculators/car-loan-emi-calculator</li>
+            <li>https://www.carwale.com/car-loan-emi-calculator/</li>
+            <li>https://groww.in/calculators/car-loan-emi-calculator</li>
+        </ol>
+    
+
+
+    <h3>Hope you like my assignment </h3>
+    <a href="https://spiffy-lamprey-f50.notion.site/MathBoard-198066e48cff41329d779df635c08fcc">Pls do check my 'Keyboard for Mathematicians' UX case study. </a>
+    <br>
+    
+</body>
+</html>
