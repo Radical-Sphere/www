@@ -59,14 +59,9 @@ Copyright (c) 2010-2011, The Apache Software Foundation
 
 
         tool-bar{
-            
-
             top: 50%;
             transform: translateY(-50%);
             position:absolute;
-
-
-            position: relative;
 
             display: grid;
             grid-template-rows: repeat(5, 50px);
@@ -76,6 +71,12 @@ Copyright (c) 2010-2011, The Apache Software Foundation
             width: 20px;
             padding: 10px;
             border-radius: 0 10px  10px 0; 
+
+            cursor: pointer;
+        }
+
+        tool-bar * svg:hover ~ .tool-bar-helper-text{
+            display:inline; 
         }
 
         .tool-bar-helper-text{
@@ -83,13 +84,17 @@ Copyright (c) 2010-2011, The Apache Software Foundation
             font-size: 10px;
             width: 400%;
             position: fixed;
-            transform: translate(1.5em, 1.5em);
+            transform: translate(1.6em, 2em);
 
             text-transform: uppercase;
             font-weight: 400;
             font-family: Arial, Helvetica, sans-serif;
             letter-spacing: 0.1em;
+            display: none;
         }
+
+
+        
 
     </style>
 
@@ -97,7 +102,7 @@ Copyright (c) 2010-2011, The Apache Software Foundation
 </head>
 <body >
 
-    <tool-bar >
+    <tool-bar>
         <think-brush>
             
             <svg width="100%"
