@@ -1,8 +1,6 @@
 // this constructor function allows us erase (draw with white color)
 // todo: DRY this out. copy of Freehand tool
 function EraserTool() {
-    this.icon = "assets/eraser.png";
-    this.name = "eraserTool";
 
     var previousMouseX = -1;
 	var previousMouseY = -1;
